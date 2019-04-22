@@ -15,7 +15,7 @@ protocol BaseViewModel: class {
   func popViewController()
 }
 
-class BaseViewController: UITableViewController, UIGestureRecognizerDelegate, BaseViewModel {
+class BaseTableVC: UITableViewController, UIGestureRecognizerDelegate, BaseViewModel {
   
   var activityIndicator = UIActivityIndicatorView.init(style: .whiteLarge)
   
@@ -23,15 +23,21 @@ class BaseViewController: UITableViewController, UIGestureRecognizerDelegate, Ba
     super.viewDidLoad()
     
     settingActivityIndicator()
-    self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-    self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    setUpTableVC()
+    navigationController?.interactivePopGestureRecognizer?.delegate = self
+    navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+  }
+  
+  func setUpTableVC() {
+    tableView.delegate = self
+    tableView.dataSource = self
   }
   
   func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
     return true
   }
   
-  fileprivate func settingActivityIndicator() {
+  private func settingActivityIndicator() {
     view.addSubview(activityIndicator)
     activityIndicator.translatesAutoresizingMaskIntoConstraints = false
     activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -44,34 +50,26 @@ class BaseViewController: UITableViewController, UIGestureRecognizerDelegate, Ba
   }
   
   func setNavigationTitleText(text: String) {
-    self.navigationController?.navigationBar.titleTextAttributes = [
+    navigationController?.navigationBar.titleTextAttributes = [
       NSAttributedString.Key.font: UIFont.MuliSemibold(size: 17),
       NSAttributedString.Key.foregroundColor: UIColor.white]
-    self.navigationItem.title = text
-  }
-  
-  @objc func backButtonClicked(sender: UIBarButtonItem) {
-    _ = self.navigationController?.popViewController(animated: true)
-  }
-  
-  @objc func backButtonClickedDismiss(sender: UIBarButtonItem) {
-    self.dismiss(animated: false, completion: nil)
+    navigationItem.title = text
   }
   
   func showLoader() {
-    self.view.bringSubviewToFront(activityIndicator)
-    self.view.isUserInteractionEnabled = false
+    view.bringSubviewToFront(activityIndicator)
+    view.isUserInteractionEnabled = false
     activityIndicator.startAnimating()
   }
   
   func hideLoader() {
-    self.view.sendSubviewToBack(activityIndicator)
-    self.view.isUserInteractionEnabled = true
+    view.sendSubviewToBack(activityIndicator)
+    view.isUserInteractionEnabled = true
     activityIndicator.stopAnimating()
   }
   
   func popViewController() {
-    self.navigationController?.popViewController(animated: true)
+    navigationController?.popViewController(animated: true)
   }
   
   func showAlert(title: String, message: String) {
@@ -79,6 +77,6 @@ class BaseViewController: UITableViewController, UIGestureRecognizerDelegate, Ba
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
     }))
-    self.present(alert, animated: true, completion: nil)
+    present(alert, animated: true, completion: nil)
   }
 }

@@ -8,6 +8,15 @@
 
 import Foundation
 
+struct SearchSeries: Codable {
+  
+  let show: Series?
+  
+  private enum CodingKeys: String, CodingKey {
+    case show
+  }
+}
+
 struct Series: Codable {
   struct Image: Codable {
     let image: String?

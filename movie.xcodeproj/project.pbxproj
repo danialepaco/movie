@@ -43,6 +43,11 @@
 		249F8469226CEBF200BAAA0B /* SeriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F8467226CEBF200BAAA0B /* SeriesTableVC.swift */; };
 		249F846A226CEBF200BAAA0B /* SeriesTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249F8468226CEBF200BAAA0B /* SeriesTableVC.xib */; };
 		249F846D226CF38700BAAA0B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F846C226CF38700BAAA0B /* BaseViewController.swift */; };
+		249F8472226D0C2900BAAA0B /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F8470226D0C2900BAAA0B /* SeriesTableViewCell.swift */; };
+		249F8473226D0C2900BAAA0B /* SeriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249F8471226D0C2900BAAA0B /* SeriesTableViewCell.xib */; };
+		249F8475226D0CFB00BAAA0B /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F8474226D0CFB00BAAA0B /* UITableViewCell+Extension.swift */; };
+		249F8477226D268A00BAAA0B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F8476226D268A00BAAA0B /* UIImageView+Extension.swift */; };
+		249F8479226D2EFC00BAAA0B /* NavStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F8478226D2EFC00BAAA0B /* NavStyle.swift */; };
 		F0AEF602C75E985EDC110D9E /* Pods_movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255BA8913E7325609AE5FD14 /* Pods_movie.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +90,11 @@
 		249F8467226CEBF200BAAA0B /* SeriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableVC.swift; sourceTree = "<group>"; };
 		249F8468226CEBF200BAAA0B /* SeriesTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SeriesTableVC.xib; path = ../Controller/SeriesTableVC.xib; sourceTree = "<group>"; };
 		249F846C226CF38700BAAA0B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		249F8470226D0C2900BAAA0B /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
+		249F8471226D0C2900BAAA0B /* SeriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesTableViewCell.xib; sourceTree = "<group>"; };
+		249F8474226D0CFB00BAAA0B /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		249F8476226D268A00BAAA0B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		249F8478226D2EFC00BAAA0B /* NavStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavStyle.swift; sourceTree = "<group>"; };
 		255BA8913E7325609AE5FD14 /* Pods_movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		989F90AA3DDB1245E840882A /* Pods-movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie.release.xcconfig"; path = "Pods/Target Support Files/Pods-movie/Pods-movie.release.xcconfig"; sourceTree = "<group>"; };
 		CA5B8FC469521A8ACE2008AD /* Pods-movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movie/Pods-movie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				249F8414226BC7B200BAAA0B /* Info.plist */,
+				24F24A68226D85B8003C1242 /* DetailedSeries */,
 				249F844D226BE5EE00BAAA0B /* Series */,
 				249F841A226BE14900BAAA0B /* Main */,
 				249F841B226BE16200BAAA0B /* Resources */,
@@ -170,6 +181,7 @@
 				249F8428226BE3C500BAAA0B /* Colors.swift */,
 				249F8453226BE6A200BAAA0B /* Images.swift */,
 				249F8465226CE1EE00BAAA0B /* JsonData.swift */,
+				249F8478226D2EFC00BAAA0B /* NavStyle.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -189,6 +201,8 @@
 				249F8424226BE39300BAAA0B /* UIColor+Extension.swift */,
 				249F8426226BE3AB00BAAA0B /* UIAplication+Extension.swift */,
 				249F842A226BE4E600BAAA0B /* UIFont+Extension.swift */,
+				249F8474226D0CFB00BAAA0B /* UITableViewCell+Extension.swift */,
+				249F8476226D268A00BAAA0B /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +266,7 @@
 		249F8450226BE60600BAAA0B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				249F846F226D0C0700BAAA0B /* Cell */,
 				249F8468226CEBF200BAAA0B /* SeriesTableVC.xib */,
 			);
 			path = View;
@@ -266,6 +281,46 @@
 				249F8461226CD26400BAAA0B /* SeriesService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		249F846F226D0C0700BAAA0B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				249F8470226D0C2900BAAA0B /* SeriesTableViewCell.swift */,
+				249F8471226D0C2900BAAA0B /* SeriesTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		24F24A68226D85B8003C1242 /* DetailedSeries */ = {
+			isa = PBXGroup;
+			children = (
+				24F24A6B226D862E003C1242 /* View */,
+				24F24A6A226D8628003C1242 /* Controller */,
+				24F24A69226D8624003C1242 /* Model */,
+			);
+			path = DetailedSeries;
+			sourceTree = "<group>";
+		};
+		24F24A69226D8624003C1242 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24F24A6A226D8628003C1242 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24F24A6B226D862E003C1242 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ACD6F3E25ACB070516430DA4 /* Frameworks */ = {
@@ -348,6 +403,7 @@
 				249F8440226BE53000BAAA0B /* Muli-SemiBold.ttf in Resources */,
 				249F843F226BE53000BAAA0B /* Muli-ExtraBold.ttf in Resources */,
 				249F846A226CEBF200BAAA0B /* SeriesTableVC.xib in Resources */,
+				249F8473226D0C2900BAAA0B /* SeriesTableViewCell.xib in Resources */,
 				249F8443226BE53000BAAA0B /* Muli-Black.ttf in Resources */,
 				249F8446226BE53000BAAA0B /* Muli-ExtraBoldItalic.ttf in Resources */,
 				249F8448226BE53000BAAA0B /* Muli-BoldItalic.ttf in Resources */,
@@ -379,12 +435,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-movie/Pods-movie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -429,12 +487,16 @@
 				249F8429226BE3C500BAAA0B /* Colors.swift in Sources */,
 				249F845C226CC57E00BAAA0B /* NetworkManager.swift in Sources */,
 				249F8454226BE6A200BAAA0B /* Images.swift in Sources */,
+				249F8477226D268A00BAAA0B /* UIImageView+Extension.swift in Sources */,
 				249F8462226CD26400BAAA0B /* SeriesService.swift in Sources */,
+				249F8479226D2EFC00BAAA0B /* NavStyle.swift in Sources */,
 				249F8469226CEBF200BAAA0B /* SeriesTableVC.swift in Sources */,
+				249F8475226D0CFB00BAAA0B /* UITableViewCell+Extension.swift in Sources */,
 				249F8427226BE3AB00BAAA0B /* UIAplication+Extension.swift in Sources */,
 				249F8422226BE34200BAAA0B /* BaseTabBarViewController.swift in Sources */,
 				249F845A226CC4E200BAAA0B /* Service.swift in Sources */,
 				249F8464226CD44400BAAA0B /* Series.swift in Sources */,
+				249F8472226D0C2900BAAA0B /* SeriesTableViewCell.swift in Sources */,
 				249F8466226CE1EE00BAAA0B /* JsonData.swift in Sources */,
 				249F842B226BE4E600BAAA0B /* UIFont+Extension.swift in Sources */,
 				249F8425226BE39300BAAA0B /* UIColor+Extension.swift in Sources */,

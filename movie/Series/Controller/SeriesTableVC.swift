@@ -8,80 +8,108 @@
 
 import UIKit
 
-class SeriesTableVC: BaseViewController {
+class SeriesTableVC: BaseTableVC {
   
+  @IBOutlet weak var searchBar: UISearchBar!
   let model = SeriesModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    searchBar.delegate = self
+    setNavigationTitleText(text: "Series")
+    getData()
+  }
+  
+  override func setUpTableVC() {
+    super.setUpTableVC()
+    tableView.register(SeriesTableViewCell.nib, forCellReuseIdentifier: SeriesTableViewCell.identifier)
+  }
+
+  private func getData() {
     
+    guard !model.isFilter else {
+      return
+    }
+    showLoader()
+    model.service?.getShows(numberOfPage: model.count, completion: { (response) in
+      guard let response = response else {
+        return
+      }
+      self.model.count += 1
+      self.model.series += response
+      self.tableView.reloadData()
+      self.hideLoader()
+    })
   }
   
   // MARK: - Table view data source
-  
-  override func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-    return 0
-  }
-  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return 0
+    guard !model.isFilter else {
+      return model.filteredSeries.count
+    }
+    return model.series.count
   }
   
-  /*
-   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-   
-   // Configure the cell...
-   
-   return cell
-   }
-   */
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let serie = model.isFilter ? model.filteredSeries[indexPath.row] : model.series[indexPath.row]
+    
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: SeriesTableViewCell.identifier, for: indexPath) as? SeriesTableViewCell else {
+      return UITableViewCell()
+    }
+    
+    cell.serieLabel.text = serie.name
+    cell.mainImage.loadImage(url: serie.image?.image ?? "")
+    return cell
+  }
   
-  /*
-   // Override to support conditional editing of the table view.
-   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-   // Return false if you do not want the specified item to be editable.
-   return true
-   }
-   */
+  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    if indexPath.row + 1 == model.series.count {
+      getData()
+    }
+  }
   
-  /*
-   // Override to support editing the table view.
-   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-   if editingStyle == .delete {
-   // Delete the row from the data source
-   tableView.deleteRows(at: [indexPath], with: .fade)
-   } else if editingStyle == .insert {
-   // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-   }
-   }
-   */
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return view.frame.height/2
+  }
+}
+
+extension SeriesTableVC: UISearchBarDelegate {
   
-  /*
-   // Override to support rearranging the table view.
-   override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-   
-   }
-   */
+  func finishedFilter() {
+    searchBar.text = ""
+    model.isFilter = false
+    model.filteredSeries.removeAll()
+    view.endEditing(true)
+    tableView.reloadData()
+  }
   
-  /*
-   // Override to support conditional rearranging of the table view.
-   override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-   // Return false if you do not want the item to be re-orderable.
-   return true
-   }
-   */
+  func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    finishedFilter()
+  }
   
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    finishedFilter()
+  }
   
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    guard searchText == "" else {
+      return
+    }
+    finishedFilter()
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    showLoader()
+    model.service?.searchShows(showToSearch: searchBar.text ?? "", completion: { (response) in
+      guard let response = response else {
+        return
+      }
+      self.model.isFilter = true
+      self.model.filteredSeries = response.compactMap({ $0.show })
+      self.tableView.reloadData()
+      self.view.endEditing(true)
+      self.hideLoader()
+    })
+  }
 }

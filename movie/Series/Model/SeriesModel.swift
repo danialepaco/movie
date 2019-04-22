@@ -9,8 +9,11 @@
 import Foundation
 
 class SeriesModel {
+  let service = ServiceLocator.sharedInstance.get(service: SeriesServiceProtocol.self)
   var series: [Series] = []
-  var count = 1
+  var filteredSeries: [Series] = []
+  var isFilter = false
+  var count = 0
   
   init() {}
 }

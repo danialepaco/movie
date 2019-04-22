@@ -7,5 +7,6 @@ target 'movie' do
 
   # Pods for movie
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end

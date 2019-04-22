@@ -9,9 +9,10 @@
 import UIKit
 
 struct Images {
-    
-    //MARK:- Icons
-    static let favoriteIcon  = UIImage(named: "favoriteIcon")
-    static let movieIcon     = UIImage(named: "movieIcon")
-    static let peopleIcon    = UIImage(named: "peopleIcon")
+  
+  //MARK:- Icons
+  static let favoriteIcon  = UIImage(named: "favoriteIcon")
+  static let movieIcon     = UIImage(named: "movieIcon")
+  static let peopleIcon    = UIImage(named: "peopleIcon")
+  static let cover         = UIImage(named: "cover")
 }

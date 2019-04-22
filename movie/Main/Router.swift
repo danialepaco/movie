@@ -9,24 +9,17 @@
 import UIKit
 
 class Router: NSObject {
-    
-    private static var window: UIWindow? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return nil
-        }
-        return appDelegate.window
+  
+  private static var window: UIWindow? {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+      return nil
     }
-    
-    static func setRootViewController(viewController: UIViewController) {
-        
-        let navigationController = UINavigationController()
-        navigationController.viewControllers = [viewController]
-        window?.rootViewController = navigationController
-    }
-    
-    // Presents HomeViewController
-    static func presentHomeViewController() {
-        let vc = BaseTabBarViewController()
-        window?.rootViewController = vc
-    }
+    return appDelegate.window
+  }
+  
+  static func presentHomeViewController() {
+    NavStyle.setupNavBarAppearance()
+    let vc = BaseTabBarViewController()
+    window?.rootViewController = vc
+  }
 }
