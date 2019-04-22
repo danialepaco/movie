@@ -22,6 +22,8 @@ final class ServiceLocator: ServiceLocatorProtocol {
       
     case String(describing: SeriesServiceProtocol.self):
       return SeriesService() as? T
+    case String(describing: EpisodesServiceProtocol.self):
+      return EpisodesService() as? T
     default:
       return nil
     }

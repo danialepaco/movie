@@ -24,7 +24,7 @@ class SeriesTableVC: BaseTableVC {
     super.setUpTableVC()
     tableView.register(SeriesTableViewCell.nib, forCellReuseIdentifier: SeriesTableViewCell.identifier)
   }
-
+  
   private func getData() {
     
     guard !model.isFilter else {
@@ -63,6 +63,13 @@ class SeriesTableVC: BaseTableVC {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let serie = model.isFilter ? model.filteredSeries[indexPath.row] : model.series[indexPath.row]
+    let vc = DetailedSeriesTableVC()
+    vc.model.serie = serie
+    navigationController?.pushViewController(vc, animated: true)
+  }
+  
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     if indexPath.row + 1 == model.series.count {
       getData()
@@ -70,7 +77,7 @@ class SeriesTableVC: BaseTableVC {
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return view.frame.height/2
+    return view.frame.height * 0.6
   }
 }
 

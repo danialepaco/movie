@@ -16,10 +16,5 @@ class SeriesTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    mainImage.layer.shadowColor = UIColor.darkGray.cgColor
-    mainImage.layer.shadowOffset = CGSize(width: -2, height: 2)
-    mainImage.layer.shadowOpacity = 1
-    mainImage.layer.shadowRadius = 1.0
-    mainImage.clipsToBounds = false
   }
 }
