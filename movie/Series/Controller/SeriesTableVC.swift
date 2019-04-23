@@ -20,6 +20,12 @@ class SeriesTableVC: BaseTableVC {
     getData()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    model.updateIsFavorite()
+    tableView.reloadData()
+  }
+  
   override func setUpTableVC() {
     super.setUpTableVC()
     tableView.register(SeriesTableViewCell.nib, forCellReuseIdentifier: SeriesTableViewCell.identifier)
@@ -49,12 +55,14 @@ class SeriesTableVC: BaseTableVC {
       return
     }
     
-    let serie = model.isFilter ? model.filteredSeries[sender.tag] : model.series[sender.tag]
+    var serie = model.isFilter ? model.filteredSeries[sender.tag] : model.series[sender.tag]
     
     if serie.isFavorite {
+      serie.isFavorite = false
       let _ = CoreDataManager.sharedManager.delete(id: Int32(serie.id ?? 0))
     } else {
-      CoreDataManager.sharedManager.insertPerson(name: serie.name ?? "", id: Int32(serie.id ?? 0), image: serie.image?.image ?? "")
+      serie.isFavorite = true
+      CoreDataManager.sharedManager.insertPerson(name: serie.name ?? "", id: Int32(serie.id ?? 0), image: serie.image?.image ?? "", isFavorite: serie.isFavorite)
     }
     
     model.updateIsFavorite()

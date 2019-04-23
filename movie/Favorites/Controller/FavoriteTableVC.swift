@@ -32,6 +32,21 @@ class FavoriteTableVC: BaseTableVC {
     tableView.reloadData()
   }
   
+  @objc func favoriteAction(sender: UITapGestureRecognizer) {
+    
+    guard let sender = sender.view as? UIImageView else {
+      return
+    }
+    
+    let serie = model.series[sender.tag]
+    
+    guard serie.isFavorite else {
+      return
+    }
+    let _ = CoreDataManager.sharedManager.delete(id: Int32(serie.id)) ?? []
+    getData()
+  }
+  
   // MARK: - Table view data source
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return model.series.count
@@ -47,7 +62,10 @@ class FavoriteTableVC: BaseTableVC {
     
     cell.serieLabel.text = serie.name
     cell.mainImage.loadImage(url: serie.image ?? "")
-    cell.favImage.isHidden = true
+    cell.updateIfFavorite(isFavorite: serie.isFavorite)
+    let tap = UITapGestureRecognizer(target: self, action: #selector(favoriteAction(sender:)))
+    cell.favImage.tag = indexPath.row
+    cell.favImage.addGestureRecognizer(tap)
     return cell
   }
   

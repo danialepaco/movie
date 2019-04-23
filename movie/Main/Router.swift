@@ -17,6 +17,12 @@ class Router: NSObject {
     return appDelegate.window
   }
   
+  static func presentLoginViewController() {
+    NavStyle.setupNavBarAppearance()
+    let vc = LoginVC()
+    window?.rootViewController = vc
+  }
+  
   static func presentHomeViewController() {
     NavStyle.setupNavBarAppearance()
     let vc = BaseTabBarViewController()

@@ -52,6 +52,8 @@
 		24A3917A226EAC610002A67F /* FavoriteTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A39178226EAC610002A67F /* FavoriteTableVC.xib */; };
 		24A3917C226EAEC10002A67F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3917B226EAEC10002A67F /* CoreDataManager.swift */; };
 		24A3917E226EB1950002A67F /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3917D226EB1950002A67F /* FavoritesModel.swift */; };
+		24A39185226ED1020002A67F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A39183226ED1020002A67F /* LoginVC.swift */; };
+		24A39186226ED1020002A67F /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A39184226ED1020002A67F /* LoginVC.xib */; };
 		24F24A6D226D8688003C1242 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F24A6C226D8688003C1242 /* Episodes.swift */; };
 		24F24A6F226D8B64003C1242 /* EpisodesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F24A6E226D8B64003C1242 /* EpisodesModel.swift */; };
 		24F24A71226D8DBB003C1242 /* EpisodesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F24A70226D8DBB003C1242 /* EpisodesService.swift */; };
@@ -118,6 +120,8 @@
 		24A39178226EAC610002A67F /* FavoriteTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableVC.xib; sourceTree = "<group>"; };
 		24A3917B226EAEC10002A67F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		24A3917D226EB1950002A67F /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
+		24A39183226ED1020002A67F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		24A39184226ED1020002A67F /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		24F24A6C226D8688003C1242 /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
 		24F24A6E226D8B64003C1242 /* EpisodesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesModel.swift; sourceTree = "<group>"; };
 		24F24A70226D8DBB003C1242 /* EpisodesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesService.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				249F8414226BC7B200BAAA0B /* Info.plist */,
+				24A3917F226ED0D50002A67F /* Login */,
 				24A39173226EABFB0002A67F /* Favorites */,
 				24FCA113226E807C00A31B04 /* EpisodeDetail */,
 				24F24A68226D85B8003C1242 /* DetailedSeries */,
@@ -371,6 +376,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		24A3917F226ED0D50002A67F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				24A39182226ED0F10002A67F /* View */,
+				24A39181226ED0EB0002A67F /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		24A39181226ED0EB0002A67F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24A39183226ED1020002A67F /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24A39182226ED0F10002A67F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24A39184226ED1020002A67F /* LoginVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		24F24A68226D85B8003C1242 /* DetailedSeries */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +590,7 @@
 				249F8444226BE53000BAAA0B /* Muli-LightItalic.ttf in Resources */,
 				24A3917A226EAC610002A67F /* FavoriteTableVC.xib in Resources */,
 				249F844C226BE53000BAAA0B /* Muli-BlackItalic.ttf in Resources */,
+				24A39186226ED1020002A67F /* LoginVC.xib in Resources */,
 				249F840B226BC7AF00BAAA0B /* Main.storyboard in Resources */,
 				249F8445226BE53000BAAA0B /* Muli-Regular.ttf in Resources */,
 				249F8441226BE53000BAAA0B /* Muli-Bold.ttf in Resources */,
@@ -651,6 +682,7 @@
 				24F24A6F226D8B64003C1242 /* EpisodesModel.swift in Sources */,
 				249F8475226D0CFB00BAAA0B /* UITableViewCell+Extension.swift in Sources */,
 				24FCA110226E757E00A31B04 /* ShadowImageView.swift in Sources */,
+				24A39185226ED1020002A67F /* LoginVC.swift in Sources */,
 				24A3917E226EB1950002A67F /* FavoritesModel.swift in Sources */,
 				249F8427226BE3AB00BAAA0B /* UIAplication+Extension.swift in Sources */,
 				24F24A71226D8DBB003C1242 /* EpisodesService.swift in Sources */,

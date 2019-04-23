@@ -45,7 +45,7 @@ class CoreDataManager {
   }
   
   /*Insert*/
-  func insertPerson(name: String, id: Int32, image: String) {
+  func insertPerson(name: String, id: Int32, image: String, isFavorite: Bool) {
     
     let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
     
@@ -58,6 +58,7 @@ class CoreDataManager {
     serie.setValue(name, forKeyPath: "name")
     serie.setValue(id, forKeyPath: "id")
     serie.setValue(image, forKeyPath: "image")
+    serie.setValue(isFavorite, forKeyPath: "isFavorite")
 
     do {
       try managedContext.save()

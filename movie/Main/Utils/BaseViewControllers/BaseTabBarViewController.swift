@@ -21,7 +21,7 @@ class BaseTabBarViewController: UITabBarController {
     let seriesVC = SeriesTableVC()
     seriesVC.tabBarItem = UITabBarItem.init(title: "Series", image:  Images.movieIcon, tag: 0)
     
-    let peopleVC = UIViewController()
+    let peopleVC = LoginVC()
     peopleVC.tabBarItem = UITabBarItem.init(title: "People", image:  Images.peopleIcon, tag: 1)
     
     let favoritesVC = FavoriteTableVC()

@@ -17,4 +17,5 @@ struct Images {
   static let peopleIcon      = UIImage(named: "peopleIcon")
   static let cover           = UIImage(named: "cover")
   static let horizontalCover = UIImage(named: "horizontalCover")
+  static let locked          = UIImage(named: "locked")
 }
