@@ -31,6 +31,6 @@ class EpisodeDetailVC: BaseVC {
       imageView.removeFromSuperview()
       return
     }
-    imageView.loadImage(url: image)
+    imageView.loadImageWithPlaceholder(url: image, placeholder: Images.horizontalCover)
   }
 }

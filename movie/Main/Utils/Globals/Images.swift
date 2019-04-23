@@ -11,7 +11,8 @@ import UIKit
 struct Images {
   
   //MARK:- Icons
-  static let favoriteIcon    = UIImage(named: "favoriteIcon")
+  static let favoriteOn      = UIImage(named: "favoriteOn")
+  static let favoriteOff     = UIImage(named: "favoriteOff")
   static let movieIcon       = UIImage(named: "movieIcon")
   static let peopleIcon      = UIImage(named: "peopleIcon")
   static let cover           = UIImage(named: "cover")

@@ -37,9 +37,28 @@ class SeriesTableVC: BaseTableVC {
       }
       self.model.count += 1
       self.model.series += response
+      self.model.updateIsFavorite()
       self.tableView.reloadData()
       self.hideLoader()
     })
+  }
+  
+  @objc func favoriteAction(sender: UITapGestureRecognizer) {
+    
+    guard let sender = sender.view as? UIImageView else {
+      return
+    }
+    
+    let serie = model.isFilter ? model.filteredSeries[sender.tag] : model.series[sender.tag]
+    
+    if serie.isFavorite {
+      let _ = CoreDataManager.sharedManager.delete(id: Int32(serie.id ?? 0))
+    } else {
+      CoreDataManager.sharedManager.insertPerson(name: serie.name ?? "", id: Int32(serie.id ?? 0), image: serie.image?.image ?? "")
+    }
+    
+    model.updateIsFavorite()
+    tableView.reloadData()
   }
   
   // MARK: - Table view data source
@@ -60,6 +79,10 @@ class SeriesTableVC: BaseTableVC {
     
     cell.serieLabel.text = serie.name
     cell.mainImage.loadImage(url: serie.image?.image ?? "")
+    cell.updateIfFavorite(isFavorite: serie.isFavorite)
+    let tap = UITapGestureRecognizer(target: self, action: #selector(favoriteAction(sender:)))
+    cell.favImage.tag = indexPath.row
+    cell.favImage.addGestureRecognizer(tap)
     return cell
   }
   

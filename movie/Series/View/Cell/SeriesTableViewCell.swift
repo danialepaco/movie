@@ -11,10 +11,11 @@ import UIKit
 class SeriesTableViewCell: UITableViewCell {
   
   @IBOutlet weak var mainImage: UIImageView!
+  @IBOutlet weak var favImage: UIImageView!
   @IBOutlet weak var favoriteImage: UIImageView!
   @IBOutlet weak var serieLabel: UILabel!
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
+  func updateIfFavorite(isFavorite: Bool) {
+    favImage.image = isFavorite ? Images.favoriteOn : Images.favoriteOff
   }
 }

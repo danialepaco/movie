@@ -24,8 +24,8 @@ class BaseTabBarViewController: UITabBarController {
     let peopleVC = UIViewController()
     peopleVC.tabBarItem = UITabBarItem.init(title: "People", image:  Images.peopleIcon, tag: 1)
     
-    let favoritesVC = UIViewController()
-    favoritesVC.tabBarItem = UITabBarItem.init(title: "Favorites", image:  Images.favoriteIcon, tag: 2)
+    let favoritesVC = FavoriteTableVC()
+    favoritesVC.tabBarItem = UITabBarItem.init(title: "Favorites", image:  Images.favoriteOn, tag: 2)
     
     let tabBarList = [seriesVC,peopleVC,favoritesVC]
     

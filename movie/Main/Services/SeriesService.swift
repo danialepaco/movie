@@ -17,10 +17,29 @@ private enum EndPoints: String {
 protocol SeriesServiceProtocol: Service {
   
   func getShows(numberOfPage index: Int, completion: @escaping ([Series]?) -> Void)
+  func getShow(idOfShow id: Int, completion: @escaping (Series?) -> Void)
   func searchShows(showToSearch showName: String, completion: @escaping ([SearchSeries]?) -> Void)
 }
 
 final class SeriesService: SeriesServiceProtocol {
+  
+  func getShow(idOfShow id: Int, completion: @escaping (Series?) -> Void) {
+    NetworkManager.manager.request("\(baseURL)\(EndPoints.shows)/\(id)", method: .get).responseData { [weak self] response in
+      
+      switch response.result {
+        
+      case .success:
+        guard let data = response.result.value else { return completion(nil) }
+        guard let response = JsonData.getModel(Series.self, data: data) else { return completion(nil) }
+        completion(response)
+        break
+        
+      case .failure:
+        completion(nil)
+        break
+      }
+    }
+  }
   
   func searchShows(showToSearch showName: String, completion: @escaping ([SearchSeries]?) -> Void) {
     NetworkManager.manager.request("\(baseURL)\(EndPoints.search.rawValue)\(showName)", method: .get).responseData { [weak self] response in

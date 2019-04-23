@@ -31,6 +31,7 @@ struct Series: Codable {
   let summary: String?
   let image: Image?
   let schedule: Schedule?
+  var isFavorite = false
   
   private enum CodingKeys: String, CodingKey {
     case id
@@ -39,7 +40,7 @@ struct Series: Codable {
     case summary
     case image
     case schedule
-  }
+  }  
 }
 
 struct SearchSeries: Codable {

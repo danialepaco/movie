@@ -16,4 +16,16 @@ class SeriesModel {
   var count = 0
   
   init() {}
+  
+  func updateIsFavorite() {
+    let fetchedSeries = CoreDataManager.sharedManager.fetchAllSeries() ?? []
+    
+    for fetchedserie in fetchedSeries {
+      for (index,serie) in series.enumerated() {
+        if serie.id == Int(fetchedserie.id) {
+          series[index].isFavorite = true
+        }
+      }
+    }
+  }
 }
