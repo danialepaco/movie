@@ -10,6 +10,10 @@ import Foundation
 
 class FavoritesModel {
   let service = ServiceLocator.sharedInstance.get(service: SeriesServiceProtocol.self)
-  var series: [Serie] = []  
+  var series: [Serie] = [] {
+    didSet {
+      series = series.sorted(by: { $0.name ?? "" < $1.name ?? "" })
+    }
+  }
   init() {}
 }

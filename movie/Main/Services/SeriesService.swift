@@ -42,7 +42,14 @@ final class SeriesService: SeriesServiceProtocol {
   }
   
   func searchShows(showToSearch showName: String, completion: @escaping ([SearchSeries]?) -> Void) {
-    NetworkManager.manager.request("\(baseURL)\(EndPoints.search.rawValue)\(showName)", method: .get).responseData { [weak self] response in
+    
+    let url = "\(baseURL)\(EndPoints.search.rawValue)\(showName)"
+    
+    guard let encodedURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+      return
+    }
+    
+    NetworkManager.manager.request(encodedURL, method: .get).responseData { [weak self] response in
       
       switch response.result {
         

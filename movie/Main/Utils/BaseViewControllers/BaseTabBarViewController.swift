@@ -11,8 +11,7 @@ import UIKit
 class BaseTabBarViewController: UITabBarController {
   
   override func viewDidLoad() {
-    super.viewDidLoad()
-        
+    super.viewDidLoad()        
     UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.MuliRegular(size: 8), NSAttributedString.Key.foregroundColor : Colors.tabBarText], for: .normal)
     UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.MuliRegular(size: 8), NSAttributedString.Key.foregroundColor : Colors.mainBlue], for: .selected)
     
@@ -21,7 +20,7 @@ class BaseTabBarViewController: UITabBarController {
     let seriesVC = SeriesTableVC()
     seriesVC.tabBarItem = UITabBarItem.init(title: "Series", image:  Images.movieIcon, tag: 0)
     
-    let peopleVC = LoginVC()
+    let peopleVC = PeopleTableVC()
     peopleVC.tabBarItem = UITabBarItem.init(title: "People", image:  Images.peopleIcon, tag: 1)
     
     let favoritesVC = FavoriteTableVC()

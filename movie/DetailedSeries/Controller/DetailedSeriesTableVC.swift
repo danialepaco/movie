@@ -39,21 +39,7 @@ class DetailedSeriesTableVC: BaseTableVC {
     header.schedule.text = "\(model.serie?.schedule?.days?.joined(separator: ", ") ?? "") at \(model.serie?.schedule?.time ?? "")"
     header.summary.text = model.serie?.summary?.stripOutHtml() ?? ""
     tableView.tableHeaderView = header
-    viewWillLayoutSubviews()
-  }
-  
-  override func viewWillLayoutSubviews() {
     super.viewWillLayoutSubviews()
-    if let headerView = tableView.tableHeaderView {
-      let height = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
-      var headerFrame = headerView.frame
-      
-      if height != headerFrame.size.height {
-        headerFrame.size.height = height
-        headerView.frame = headerFrame
-        tableView.tableHeaderView = headerView
-      }
-    }
   }
   
   private func getData() {

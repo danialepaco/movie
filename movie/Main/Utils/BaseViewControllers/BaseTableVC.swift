@@ -72,6 +72,20 @@ class BaseTableVC: UITableViewController, UIGestureRecognizerDelegate, BaseViewM
     navigationController?.popViewController(animated: true)
   }
   
+  override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    if let headerView = tableView.tableHeaderView {
+      let height = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+      var headerFrame = headerView.frame
+      
+      if height != headerFrame.size.height {
+        headerFrame.size.height = height
+        headerView.frame = headerFrame
+        tableView.tableHeaderView = headerView
+      }
+    }
+  }
+  
   func showAlert(title: String, message: String) {
     
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

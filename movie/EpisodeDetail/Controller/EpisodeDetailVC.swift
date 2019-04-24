@@ -10,6 +10,7 @@ import UIKit
 
 class EpisodeDetailVC: BaseVC {
   
+  @IBOutlet weak var imageContainer: UIView!
   @IBOutlet weak var imageView: ShadowImageView!
   @IBOutlet weak var seasonLabel: UILabel!
   @IBOutlet weak var summaryLabel: UILabel!
@@ -28,7 +29,7 @@ class EpisodeDetailVC: BaseVC {
     summaryLabel.text = model.episode?.summary?.stripOutHtml()
     
     guard let image = model.episode?.image?.image else {
-      imageView.removeFromSuperview()
+      imageContainer.removeFromSuperview()
       return
     }
     imageView.loadImageWithPlaceholder(url: image, placeholder: Images.horizontalCover)

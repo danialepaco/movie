@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeDetailVC" customModule="movie" customModuleProvider="target">
             <connections>
+                <outlet property="imageContainer" destination="EUi-3C-geI" id="9Ac-cy-dUf"/>
                 <outlet property="imageView" destination="UQK-nh-OVu" id="B8D-ct-qPB"/>
                 <outlet property="seasonLabel" destination="wc5-zn-THu" id="l3W-Q5-TMj"/>
                 <outlet property="summaryLabel" destination="G6o-uc-Sf0" id="t3U-7t-UD6"/>

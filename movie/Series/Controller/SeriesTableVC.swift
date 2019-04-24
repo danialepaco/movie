@@ -121,11 +121,7 @@ extension SeriesTableVC: UISearchBarDelegate {
     view.endEditing(true)
     tableView.reloadData()
   }
-  
-  func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-    finishedFilter()
-  }
-  
+    
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     finishedFilter()
   }

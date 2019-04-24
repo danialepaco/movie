@@ -54,6 +54,21 @@
 		24A3917E226EB1950002A67F /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3917D226EB1950002A67F /* FavoritesModel.swift */; };
 		24A39185226ED1020002A67F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A39183226ED1020002A67F /* LoginVC.swift */; };
 		24A39186226ED1020002A67F /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A39184226ED1020002A67F /* LoginVC.xib */; };
+		24D7B329226FAF6A002AADE0 /* PeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D7B328226FAF6A002AADE0 /* PeopleCell.xib */; };
+		24D7B32C226FB12D002AADE0 /* PeopleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B32A226FB12D002AADE0 /* PeopleTableVC.swift */; };
+		24D7B32D226FB12D002AADE0 /* PeopleTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D7B32B226FB12D002AADE0 /* PeopleTableVC.xib */; };
+		24D7B32F226FB237002AADE0 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B32E226FB237002AADE0 /* People.swift */; };
+		24D7B331226FB331002AADE0 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B330226FB331002AADE0 /* PeopleModel.swift */; };
+		24D7B333226FB3FC002AADE0 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B332226FB3FC002AADE0 /* PeopleService.swift */; };
+		24D7B335226FB956002AADE0 /* PeopleShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B334226FB956002AADE0 /* PeopleShow.swift */; };
+		24D7B33C226FE8D4002AADE0 /* DetailedPeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B33B226FE8D4002AADE0 /* DetailedPeopleModel.swift */; };
+		24D7B33F226FE968002AADE0 /* DetailedPeopleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B33D226FE968002AADE0 /* DetailedPeopleTableVC.swift */; };
+		24D7B340226FE968002AADE0 /* DetailedPeopleTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D7B33E226FE968002AADE0 /* DetailedPeopleTableVC.xib */; };
+		24D7B342226FE986002AADE0 /* DetailedPeopleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D7B341226FE986002AADE0 /* DetailedPeopleHeader.swift */; };
+		24D7B346226FE99A002AADE0 /* DetailedPeopleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D7B345226FE99A002AADE0 /* DetailedPeopleHeader.xib */; };
+		24F21E99226F617E00A515F1 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F21E98226F617E00A515F1 /* RoundedImageView.swift */; };
+		24F21EA1226F62D600A515F1 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F21EA0226F62D600A515F1 /* UICollectionViewCell+Extension.swift */; };
+		24F21EA4226F634500A515F1 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F21EA2226F634500A515F1 /* PeopleCell.swift */; };
 		24F24A6D226D8688003C1242 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F24A6C226D8688003C1242 /* Episodes.swift */; };
 		24F24A6F226D8B64003C1242 /* EpisodesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F24A6E226D8B64003C1242 /* EpisodesModel.swift */; };
 		24F24A71226D8DBB003C1242 /* EpisodesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F24A70226D8DBB003C1242 /* EpisodesService.swift */; };
@@ -122,6 +137,21 @@
 		24A3917D226EB1950002A67F /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 		24A39183226ED1020002A67F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		24A39184226ED1020002A67F /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		24D7B328226FAF6A002AADE0 /* PeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleCell.xib; sourceTree = "<group>"; };
+		24D7B32A226FB12D002AADE0 /* PeopleTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableVC.swift; sourceTree = "<group>"; };
+		24D7B32B226FB12D002AADE0 /* PeopleTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PeopleTableVC.xib; path = Controller/PeopleTableVC.xib; sourceTree = "<group>"; };
+		24D7B32E226FB237002AADE0 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		24D7B330226FB331002AADE0 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
+		24D7B332226FB3FC002AADE0 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
+		24D7B334226FB956002AADE0 /* PeopleShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleShow.swift; sourceTree = "<group>"; };
+		24D7B33B226FE8D4002AADE0 /* DetailedPeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPeopleModel.swift; sourceTree = "<group>"; };
+		24D7B33D226FE968002AADE0 /* DetailedPeopleTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPeopleTableVC.swift; sourceTree = "<group>"; };
+		24D7B33E226FE968002AADE0 /* DetailedPeopleTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedPeopleTableVC.xib; sourceTree = "<group>"; };
+		24D7B341226FE986002AADE0 /* DetailedPeopleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPeopleHeader.swift; sourceTree = "<group>"; };
+		24D7B345226FE99A002AADE0 /* DetailedPeopleHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedPeopleHeader.xib; sourceTree = "<group>"; };
+		24F21E98226F617E00A515F1 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		24F21EA0226F62D600A515F1 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		24F21EA2226F634500A515F1 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		24F24A6C226D8688003C1242 /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
 		24F24A6E226D8B64003C1242 /* EpisodesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesModel.swift; sourceTree = "<group>"; };
 		24F24A70226D8DBB003C1242 /* EpisodesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesService.swift; sourceTree = "<group>"; };
@@ -176,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				249F8414226BC7B200BAAA0B /* Info.plist */,
+				24D7B336226FE7ED002AADE0 /* DetailedPeople */,
+				24F21E93226F60C600A515F1 /* People */,
 				24A3917F226ED0D50002A67F /* Login */,
 				24A39173226EABFB0002A67F /* Favorites */,
 				24FCA113226E807C00A31B04 /* EpisodeDetail */,
@@ -250,6 +282,7 @@
 				249F8426226BE3AB00BAAA0B /* UIAplication+Extension.swift */,
 				249F842A226BE4E600BAAA0B /* UIFont+Extension.swift */,
 				249F8474226D0CFB00BAAA0B /* UITableViewCell+Extension.swift */,
+				24F21EA0226F62D600A515F1 /* UICollectionViewCell+Extension.swift */,
 				249F8476226D268A00BAAA0B /* UIImageView+Extension.swift */,
 				24FCA111226E7BB900A31B04 /* String+Extension.swift */,
 			);
@@ -329,6 +362,7 @@
 				249F845F226CD21B00BAAA0B /* ServiceLocator.swift */,
 				249F8461226CD26400BAAA0B /* SeriesService.swift */,
 				24F24A70226D8DBB003C1242 /* EpisodesService.swift */,
+				24D7B332226FB3FC002AADE0 /* PeopleService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -401,6 +435,96 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		24D7B336226FE7ED002AADE0 /* DetailedPeople */ = {
+			isa = PBXGroup;
+			children = (
+				24D7B339226FE816002AADE0 /* View */,
+				24D7B33E226FE968002AADE0 /* DetailedPeopleTableVC.xib */,
+				24D7B338226FE811002AADE0 /* Controller */,
+				24D7B337226FE80C002AADE0 /* Model */,
+			);
+			path = DetailedPeople;
+			sourceTree = "<group>";
+		};
+		24D7B337226FE80C002AADE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24D7B33B226FE8D4002AADE0 /* DetailedPeopleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24D7B338226FE811002AADE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24D7B33D226FE968002AADE0 /* DetailedPeopleTableVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24D7B339226FE816002AADE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24D7B33A226FE820002AADE0 /* Header */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24D7B33A226FE820002AADE0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				24D7B341226FE986002AADE0 /* DetailedPeopleHeader.swift */,
+				24D7B345226FE99A002AADE0 /* DetailedPeopleHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		24F21E93226F60C600A515F1 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				24F21E96226F614800A515F1 /* View */,
+				24D7B32B226FB12D002AADE0 /* PeopleTableVC.xib */,
+				24F21E95226F614400A515F1 /* Controller */,
+				24F21E94226F614000A515F1 /* Model */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		24F21E94226F614000A515F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24D7B32E226FB237002AADE0 /* People.swift */,
+				24D7B334226FB956002AADE0 /* PeopleShow.swift */,
+				24D7B330226FB331002AADE0 /* PeopleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24F21E95226F614400A515F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24D7B32A226FB12D002AADE0 /* PeopleTableVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24F21E96226F614800A515F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24F21E97226F614D00A515F1 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24F21E97226F614D00A515F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				24F21EA2226F634500A515F1 /* PeopleCell.swift */,
+				24D7B328226FAF6A002AADE0 /* PeopleCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		24F24A68226D85B8003C1242 /* DetailedSeries */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				24FCA10F226E757E00A31B04 /* ShadowImageView.swift */,
+				24F21E98226F617E00A515F1 /* RoundedImageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -576,10 +701,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				249F8440226BE53000BAAA0B /* Muli-SemiBold.ttf in Resources */,
+				24D7B32D226FB12D002AADE0 /* PeopleTableVC.xib in Resources */,
 				24FCA11A226E80E000A31B04 /* EpisodeDetailVC.xib in Resources */,
 				249F843F226BE53000BAAA0B /* Muli-ExtraBold.ttf in Resources */,
 				249F846A226CEBF200BAAA0B /* SeriesTableVC.xib in Resources */,
 				249F8473226D0C2900BAAA0B /* SeriesTableViewCell.xib in Resources */,
+				24D7B346226FE99A002AADE0 /* DetailedPeopleHeader.xib in Resources */,
 				249F8443226BE53000BAAA0B /* Muli-Black.ttf in Resources */,
 				249F8446226BE53000BAAA0B /* Muli-ExtraBoldItalic.ttf in Resources */,
 				249F8448226BE53000BAAA0B /* Muli-BoldItalic.ttf in Resources */,
@@ -597,6 +724,8 @@
 				249F844A226BE53000BAAA0B /* Muli-SemiBoldItalic.ttf in Resources */,
 				249F844B226BE53000BAAA0B /* Muli-Light.ttf in Resources */,
 				24FCA10D226E6F2000A31B04 /* DetailedSeriesCell.xib in Resources */,
+				24D7B329226FAF6A002AADE0 /* PeopleCell.xib in Resources */,
+				24D7B340226FE968002AADE0 /* DetailedPeopleTableVC.xib in Resources */,
 				249F8449226BE53000BAAA0B /* Muli-ExtraLight.ttf in Resources */,
 				24F24A75226D9B0E003C1242 /* DetailedSeriesTableVC.xib in Resources */,
 				249F8447226BE53000BAAA0B /* Muli-Italic.ttf in Resources */,
@@ -661,8 +790,11 @@
 			files = (
 				249F845E226CC88F00BAAA0B /* SeriesModel.swift in Sources */,
 				249F8406226BC7AF00BAAA0B /* AppDelegate.swift in Sources */,
+				24F21EA4226F634500A515F1 /* PeopleCell.swift in Sources */,
 				249F841D226BE1B600BAAA0B /* Router.swift in Sources */,
+				24D7B33C226FE8D4002AADE0 /* DetailedPeopleModel.swift in Sources */,
 				249F840E226BC7AF00BAAA0B /* movie.xcdatamodeld in Sources */,
+				24F21EA1226F62D600A515F1 /* UICollectionViewCell+Extension.swift in Sources */,
 				24F24A74226D9B0E003C1242 /* DetailedSeriesTableVC.swift in Sources */,
 				24A39179226EAC610002A67F /* FavoriteTableVC.swift in Sources */,
 				24FCA11C226E814800A31B04 /* EpisodeModel.swift in Sources */,
@@ -673,9 +805,12 @@
 				249F8429226BE3C500BAAA0B /* Colors.swift in Sources */,
 				249F845C226CC57E00BAAA0B /* NetworkManager.swift in Sources */,
 				24FCA104226E3BF100A31B04 /* DetailedSeriesHeader.swift in Sources */,
+				24F21E99226F617E00A515F1 /* RoundedImageView.swift in Sources */,
 				249F8454226BE6A200BAAA0B /* Images.swift in Sources */,
+				24D7B335226FB956002AADE0 /* PeopleShow.swift in Sources */,
 				249F8477226D268A00BAAA0B /* UIImageView+Extension.swift in Sources */,
 				249F8462226CD26400BAAA0B /* SeriesService.swift in Sources */,
+				24D7B331226FB331002AADE0 /* PeopleModel.swift in Sources */,
 				249F8479226D2EFC00BAAA0B /* NavStyle.swift in Sources */,
 				249F8469226CEBF200BAAA0B /* SeriesTableVC.swift in Sources */,
 				24F24A6D226D8688003C1242 /* Episodes.swift in Sources */,
@@ -690,12 +825,17 @@
 				249F8422226BE34200BAAA0B /* BaseTabBarViewController.swift in Sources */,
 				249F845A226CC4E200BAAA0B /* Service.swift in Sources */,
 				249F8464226CD44400BAAA0B /* Series.swift in Sources */,
+				24D7B32F226FB237002AADE0 /* People.swift in Sources */,
+				24D7B33F226FE968002AADE0 /* DetailedPeopleTableVC.swift in Sources */,
+				24D7B333226FB3FC002AADE0 /* PeopleService.swift in Sources */,
 				249F8472226D0C2900BAAA0B /* SeriesTableViewCell.swift in Sources */,
 				249F8466226CE1EE00BAAA0B /* JsonData.swift in Sources */,
 				249F842B226BE4E600BAAA0B /* UIFont+Extension.swift in Sources */,
 				249F8425226BE39300BAAA0B /* UIColor+Extension.swift in Sources */,
 				24A3917C226EAEC10002A67F /* CoreDataManager.swift in Sources */,
+				24D7B32C226FB12D002AADE0 /* PeopleTableVC.swift in Sources */,
 				24FCA10C226E6F2000A31B04 /* DetailedSeriesCell.swift in Sources */,
+				24D7B342226FE986002AADE0 /* DetailedPeopleHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

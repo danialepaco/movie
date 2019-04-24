@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DetailedPeopleHeader" customModule="movie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKP-Z1-KLv">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Das-PK-cEC">
+                            <rect key="frame" x="0.0" y="10" width="414" height="798"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWS-GG-F4U">
+                                    <rect key="frame" x="159" y="0.0" width="96" height="798"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KX8-y6-Vtc" customClass="RoundedImageView" customModule="movie" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="96" id="iGh-Yc-Hh8"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="KX8-y6-Vtc" firstAttribute="leading" secondItem="MWS-GG-F4U" secondAttribute="leading" id="7Ol-16-Kbu"/>
+                                        <constraint firstItem="KX8-y6-Vtc" firstAttribute="width" secondItem="KX8-y6-Vtc" secondAttribute="height" multiplier="1:1" id="QJc-av-N7r"/>
+                                        <constraint firstAttribute="trailing" secondItem="KX8-y6-Vtc" secondAttribute="trailing" id="SIh-91-AN4"/>
+                                        <constraint firstAttribute="bottom" secondItem="KX8-y6-Vtc" secondAttribute="bottom" id="b36-pn-0Dg"/>
+                                        <constraint firstItem="KX8-y6-Vtc" firstAttribute="centerY" secondItem="MWS-GG-F4U" secondAttribute="centerY" id="dkX-Pi-283"/>
+                                        <constraint firstItem="KX8-y6-Vtc" firstAttribute="top" secondItem="MWS-GG-F4U" secondAttribute="top" id="kky-fv-YvR"/>
+                                        <constraint firstItem="KX8-y6-Vtc" firstAttribute="centerX" secondItem="MWS-GG-F4U" secondAttribute="centerX" id="rQt-IH-5KS"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Das-PK-cEC" firstAttribute="leading" secondItem="XKP-Z1-KLv" secondAttribute="leading" id="6KR-WH-fWj"/>
+                        <constraint firstAttribute="bottom" secondItem="Das-PK-cEC" secondAttribute="bottom" constant="10" id="Zyo-xB-AWE"/>
+                        <constraint firstItem="Das-PK-cEC" firstAttribute="top" secondItem="XKP-Z1-KLv" secondAttribute="top" constant="10" id="hYw-nH-j3X"/>
+                        <constraint firstAttribute="trailing" secondItem="Das-PK-cEC" secondAttribute="trailing" id="vaE-hD-jOk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XKP-Z1-KLv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Nsu-nm-ayS"/>
+                <constraint firstItem="XKP-Z1-KLv" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" priority="250" id="UL7-dp-cUh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XKP-Z1-KLv" secondAttribute="trailing" id="XbK-S7-Uvc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XKP-Z1-KLv" secondAttribute="bottom" id="d9P-Us-q2T"/>
+                <constraint firstItem="XKP-Z1-KLv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hf8-dq-gFi"/>
+                <constraint firstItem="XKP-Z1-KLv" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="j4l-Zh-juM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="KX8-y6-Vtc" id="SPN-d6-fhd"/>
+                <outlet property="mainView" destination="XKP-Z1-KLv" id="Pe8-dM-CpY"/>
+            </connections>
+        </view>
+    </objects>
+</document>
