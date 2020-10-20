@@ -16,8 +16,6 @@ class BaseVC: UIViewController, UIGestureRecognizerDelegate, BaseViewModel {
     super.viewDidLoad()
     
     settingActivityIndicator()
-    navigationController?.interactivePopGestureRecognizer?.delegate = self
-    navigationController?.interactivePopGestureRecognizer?.isEnabled = true
   }
 
   func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -51,12 +49,11 @@ class BaseVC: UIViewController, UIGestureRecognizerDelegate, BaseViewModel {
   
   func hideLoader() {
     view.sendSubviewToBack(activityIndicator)
-    view.isUserInteractionEnabled = true
     activityIndicator.stopAnimating()
   }
   
   func popViewController() {
-    navigationController?.popViewController(animated: true)
+    navigationController?.popViewController(animated: false)
   }
   
   func showAlert(title: String, message: String) {
